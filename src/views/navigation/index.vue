@@ -22,6 +22,7 @@
     import ChinaMap from './components/china'
     import CountTitle from './components/CountTitle'
     import CountLeft from './components/CountLeft'
+    import { uuid ,isMobile , digitUppercase } from 'renyh-methods-module'
 
     const animationDuration = 6000
 
@@ -36,7 +37,7 @@
             return {}
         },
         mounted() {
-            console.log(this.clientWidth,this.clientHeight)
+            console.log(this.clientWidth,this.clientHeight,isMobile(),digitUppercase(123))
         },
         beforeDestroy() {
 
