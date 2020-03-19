@@ -10,7 +10,7 @@ PC端模板
 
 #### 安装教程
 
-git clone https://github.com/PanJiaChen/vue-element-admin.git
+git clone https://gitee.com/renyh/vue-template-fy.git
 
 cd vue-element-admin
 
