@@ -2,29 +2,29 @@
 
 #### 介绍
 PC端模板
+主要用于后台管理平台、可视化大数据(集成ehcarts)
 
 #### 软件架构
-软件架构说明
+根据vue-admin-template修改而来；
 
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+# clone the project
+git clone https://github.com/PanJiaChen/vue-element-admin.git
 
-#### 使用说明
+# enter the project directory
+cd vue-element-admin
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+# install dependency
+npm install
+
+# develop
+npm run dev
+
 
 #### 参与贡献
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
 
 
 #### 码云特技
