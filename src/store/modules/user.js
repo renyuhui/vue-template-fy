@@ -5,7 +5,7 @@ import {RESET_STATE,SET_TOKEN,SET_NAME,SET_AVATAR} from './mutation-types'
 
 const state = {
     token: getToken(),
-    name: '',
+    name: '123123',
     avatar: ''
 }
 
@@ -33,18 +33,13 @@ const actions = {
   // user login
   login({ commit }, userInfo) {
       // IAS_WEB_ST_SSO_ID('28a4abea-c2f2-4a58-b6af-340eae318064')
-      console.log(login)
       const { data } = {
           code: 20000,
-          data: {token: "admin-token"}
+          data: {token: "0812c5bc-632e-452b-a199-52fa2309f556"}
       };
       commit(SET_TOKEN, data.token)
       setToken(data.token);
-      // login_BI({username:'password',rememberme:'rememberme'}).then(res =>{
-      //     console.log(res)
-      // }).catch(res =>{
-      //     console.log(res)
-      // })
+
       // let dataArr = JSON.stringify({"phone":"zzyy"});
       // login_APP(dataArr).then(res=>{
       //     console.log(res)
@@ -123,6 +118,14 @@ const actions = {
       commit(RESET_STATE)
       resolve()
     })
+  },
+
+  login_BI({commit}){
+      login_BI({username:'password',rememberme:'rememberme'}).then(res =>{
+          console.log(res)
+      }).catch(res =>{
+          console.log(res)
+      })
   }
 }
 

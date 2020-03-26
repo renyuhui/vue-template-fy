@@ -1,23 +1,20 @@
-<template>
-    <div>
-        <div class="count-title"><count-title /></div>
-        <div class="count-row">
-            <div class="count-left">
-                <count-left />
-            </div>
-            <div class="count-right">
-                <china-map/>
-            </div>
-        </div>
+<!--<template>-->
+    <!--<div>-->
+        <!--<div class="count-title"><count-title /></div>-->
+        <!--<div class="count-row">-->
+            <!--<div class="count-left">-->
+                <!--<count-left />-->
+            <!--</div>-->
+            <!--<div class="count-right">-->
+                <!--<china-map/>-->
+            <!--</div>-->
+        <!--</div>-->
 
-    </div>
+    <!--</div>-->
 
-</template>
+<!--</template>-->
 
 <script>
-
-    import resize from './mixins/resize'
-    // import china from './mixins/china'
 
     import ChinaMap from './components/china'
     import CountTitle from './components/CountTitle'
@@ -27,7 +24,7 @@
     const animationDuration = 6000
 
     export default {
-        // mixins: [resize],
+        mixins: [],
         components: {
             ChinaMap,
             CountTitle,
@@ -37,12 +34,37 @@
             return {}
         },
         mounted() {
-            console.log(this.clientWidth,this.clientHeight,isMobile(),digitUppercase(123))
+            console.log(this.clientWidth,this.clientHeight,isMobile(),digitUppercase(123));
+            // this.$store.dispatch('user/login_BI', {data: 123}).then((res) => {
+            //     console.log(res)
+            // }).catch((res) => {
+            //     console.log(res)
+            // })
         },
         beforeDestroy() {
 
         },
-        methods: {}
+        methods: {
+
+        },
+        render(){
+            return (
+                <div>
+                    <div className="count-title">
+                        <count-title/>
+                    </div>
+                    <div className="count-row">
+                        <div className="count-left">
+                            <count-left/>
+                        </div>
+                        <div className="count-right">
+                            <china-map/>
+                        </div>
+                    </div>
+
+                </div>
+            )
+        }
     }
 </script>
 <style lang="scss" scoped>

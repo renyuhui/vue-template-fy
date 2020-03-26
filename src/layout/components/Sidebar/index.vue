@@ -22,15 +22,17 @@
 import { mapGetters } from 'vuex'
 import Logo from './Logo'
 import SidebarItem from './SidebarItem'
+import Redirect from './Redirect'
 import variables from '@/styles/variables.scss'
 
 export default {
-  components: { SidebarItem, Logo },
+  components: { SidebarItem , Logo , Redirect },
   computed: {
     ...mapGetters([
       'sidebar'
     ]),
     routes() {
+        console.log(this.$router.options.routes)
       return this.$router.options.routes
     },
     activeMenu() {

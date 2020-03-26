@@ -59,6 +59,18 @@ export const constantRoutes = [
     },
 
     {
+        path: '/redirect', // 重定向路由
+        // component: () => import('@/views/layout/components/Sidebar/Redirect'),
+        // hidden: true,
+        component: Layout,
+        hidden: true,
+        children: [{
+            path: '',
+            component: () => import('@/layout/components/Sidebar/Redirect')
+        }]
+    },
+
+    {
         path: '/example',
         component: Layout,
         redirect: '/example/table',
@@ -205,7 +217,7 @@ export const constantRoutes = [
 ]
 
 const createRouter = () => new Router({
-    // mode: 'history', // require service support
+    mode: 'history', // require service support
     scrollBehavior: () => ({y: 0}),
     routes: constantRoutes
 })

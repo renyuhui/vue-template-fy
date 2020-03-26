@@ -54,5 +54,8 @@
         /*margin-bottom: 0px;*/
         margin: 0;
     }
+    .main-container{
+        margin-left: 0px!important;
+    }
 
 </style>
