@@ -1,24 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import getters from './getters'
-
-import app from './modules/app'
-import settings from './modules/settings'
-import user from './modules/user'
-import date from './modules/date'
-import news from './modules/news'
-import province from './modules/province'
+import setters from './setters'
 
 Vue.use(Vuex)
-
+console.log(setters)
 const store = new Vuex.Store({
     modules: {
-        app,
-        settings,
-        user,
-        date,
-        news,
-        province
+        ...setters
     },
     getters,
 })
