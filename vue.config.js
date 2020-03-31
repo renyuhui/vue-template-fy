@@ -6,7 +6,7 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-const name = defaultSettings.title || 'vue Admin Template' // page title
+const name = defaultSettings.title || 'Template' // page title
 
 // If your port is set to 80,
 // use administrator privileges to execute the command line.
@@ -94,6 +94,16 @@ module.exports = {
       .rule('svg')
       .exclude.add(resolve('src/icons'))
       .end()
+    // config.module
+    //   .rule('url')
+    //   .test(/\.(png|jpe?g|gif)(\?.*)?$/)
+    //   .use('url-loader')
+    //   .loader('url-loader?limit=8192&name=img/[hash:8].[name].[ext]')
+    //   // .options({
+    //   //   limit: 5000,
+    //   //   name: resolve('src/assets/map/[name].[hash:7].[ext]')
+    //   // })
+    //   .end()
     config.module
       .rule('icons')
       .test(/\.svg$/)

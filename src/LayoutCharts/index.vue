@@ -15,7 +15,7 @@
 <script>
     import {Navbar, AppMain, FootMarquee} from './components'
     import resize from './mixins/resize'
-
+    import {mapGetters} from 'vuex'
     export default {
         name: "LayoutCharts",
         mixins: [resize],
@@ -24,20 +24,11 @@
             FootMarquee,
             AppMain
         },
-        data() {
-            return {
-                BIBG: "#071347",
-                menuList: ['驾驶舱', '品质控制', '安全生产', '复医天健智慧医院后勤运营平台', '保洁运送', '工程维修', '膳食餐饮'],
-                date_value: '2020-02'
-            }
-        },
-        mounted(){
-            this.$store.dispatch('date/login',"123")
-        },
-        methods:{
-
+        computed:{
+            ...mapGetters([
+                'BIBG'
+            ])
         }
-
     }
 </script>
 

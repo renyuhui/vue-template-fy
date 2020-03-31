@@ -18,6 +18,7 @@ import '@/icons' // icon
 import '@/permission' // permission control
 
 import Moment from 'moment'
+
 Vue.prototype.moment = Moment
 
 /**
@@ -28,10 +29,10 @@ Vue.prototype.moment = Moment
  * Currently MockJs will be used in the production environment,
  * please remove it before going online ! ! !
  */
-if (process.env.NODE_ENV === 'production') {
-  const { mockXHR } = require('../mock')
-  mockXHR()
-}
+// if (process.env.NODE_ENV === 'production') {
+//   const { mockXHR } = require('../mock')
+//   mockXHR()
+// }
 
 // set ElementUI lang to EN
 // Vue.use(ElementUI, { locale })
@@ -41,8 +42,23 @@ Vue.use(ElementUI)
 Vue.config.productionTip = false
 
 new Vue({
-  el: '#app',
-  router,
-  store,
-  render: h => h(App)
+    el: '#app',
+    router,
+    store,
+    created() {
+        if (sessionStorage.getItem("store")) {
+            store.replaceState(
+                Object.assign(
+                    {},
+                    store.state,
+                    JSON.parse(sessionStorage.getItem("store"))
+                )
+            );
+            sessionStorage.removeItem("store")
+        }
+        window.addEventListener("beforeunload", () => {
+            sessionStorage.setItem("store", JSON.stringify(store.state));
+        });
+    },
+    render: h => h(App)
 })

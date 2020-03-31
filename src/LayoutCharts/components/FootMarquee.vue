@@ -11,17 +11,14 @@
 </template>
 
 <script>
+    import {mapGetters} from 'vuex'
+
   export default {
     name: 'FootMarquee',
-    data(){
-      return {
-        newsList: [
-          { message: '我向left滚动1' },
-          { message: '我向left滚动2' }
-        ]
-      }
-    },
     computed: {
+        ...mapGetters([
+           'newsList'
+        ]),
       key() {
         return this.$route.path
       }

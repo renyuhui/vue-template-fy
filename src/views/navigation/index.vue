@@ -50,14 +50,14 @@
         render(){
             return (
                 <div>
-                    <div className="count-title">
+                    <div class="count-title">
                         <count-title/>
                     </div>
-                    <div className="count-row">
-                        <div className="count-left">
+                    <div class="count-row">
+                        <div class="count-left">
                             <count-left/>
                         </div>
-                        <div className="count-right">
+                        <div class="count-right">
                             <china-map/>
                         </div>
                     </div>

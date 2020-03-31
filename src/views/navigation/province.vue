@@ -1,10 +1,13 @@
 <template>
-    <div :class="className" :style="{height:height,width:width}"/>
-
+    <!--<div :class="className" :style="{height:height,width:width}"/>-->
+    <div>
+        <province-map />
+    </div>
 </template>
 
 <script>
     import echarts from 'echarts'
+    import ProvinceMap from './components/province'
 
     require('echarts/theme/macarons') // echarts theme
     // import resize from './mixins/resize'
@@ -27,16 +30,36 @@
                 default: '300px'
             }
         },
+        components:{
+            ProvinceMap
+        },
         data() {
             return {
                 chart: null
             }
         },
+        // computed(){
+        //
+        // },
+        beforeCreate(){
+
+        },
+        created(){
+
+        },
+        beforeMount(){
+            this.$store.dispatch('settings/changeDetailBg', true)
+        },
         mounted() {
             this.$nextTick(() => {
-                this.initChart()
+                // this.initChart()
             });
-            console.log(this.$route.params)
+        },
+        beforeUpdate(){
+
+        },
+        updated(){
+
         },
         beforeDestroy() {
             if (!this.chart) {
@@ -45,7 +68,14 @@
             this.chart.dispose()
             this.chart = null
         },
+        destroyed(){
+            this.$store.dispatch('settings/changeDetailBg', false)
+        },
         methods: {
+            add(){
+                console.log('qwer')
+                // this.$store.dispatch('settings/changeDetailBg', true);
+            },
             initChart() {
                 this.chart = echarts.init(this.$el, 'macarons')
 
