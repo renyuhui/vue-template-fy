@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie'
-import { TOGGLE_SIDEBAR , CLOSE_SIDEBAR , TOGGLE_DEVICE } from './mutation-types'
+import { TOGGLE_SIDEBAR , CLOSE_SIDEBAR , TOGGLE_DEVICE } from '@/store/mutation-types'
 
 const state = {
   sidebar: {

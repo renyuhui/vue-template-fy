@@ -1,7 +1,7 @@
 import { login, logout, getInfo , login_BI ,login_APP } from '@/api/user'
 import { getToken, setToken, removeToken ,IAS_WEB_ST_SSO_ID } from '@/utils/auth'
 import { resetRouter } from '@/router'
-import {RESET_STATE,SET_TOKEN,SET_NAME,SET_AVATAR} from './mutation-types'
+import {RESET_STATE,SET_TOKEN,SET_NAME,SET_AVATAR} from '@/store/mutation-types'
 
 const state = {
     token: getToken(),

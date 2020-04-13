@@ -12,6 +12,11 @@
         :collapse-transition="false"
         mode="vertical"
       >
+         <!-- <el-menu-item index="0">
+              <i class="el-icon-menu"></i>
+              <span>功能导航</span>
+          </el-menu-item>-->
+
         <sidebar-item v-for="route in routes" :key="route.path" :item="route" :base-path="route.path" />
       </el-menu>
     </el-scrollbar>

@@ -1,6 +1,6 @@
 import {login, logout, getInfo , login_BI,login_APP} from '@/api/user'
 import {getDate, setDate, removeDate} from '@/utils/auth'
-import {SET_DATE , SET_AREA_INFO} from './mutation-types'
+import {SET_DATE , SET_AREA_INFO} from '@/store/mutation-types'
 // import { resetRouter } from '@/router'
 
 const state = {

@@ -1,5 +1,5 @@
 import defaultSettings from '@/settings'
-import {CHANGE_SETTING, BI_DETAIL_BG} from './mutation-types'
+import {CHANGE_SETTING, BI_DETAIL_BG} from '@/store/mutation-types'
 
 const {showSettings, fixedHeader, sidebarLogo} = defaultSettings
 

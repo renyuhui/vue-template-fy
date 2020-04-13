@@ -1,5 +1,5 @@
 import {login, logout, getInfo , login_BI,login_APP} from '@/api/user'
-import {GET_NEWS} from './mutation-types'
+import {GET_NEWS} from '@/store/mutation-types'
 
 const state = {
     newsList: [

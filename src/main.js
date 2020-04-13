@@ -1,5 +1,6 @@
 import Vue from 'vue'
 
+import Cookies from 'js-cookie'
 import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 
 import ElementUI from 'element-ui'
@@ -18,6 +19,8 @@ import '@/icons' // icon
 import '@/permission' // permission control
 
 import Moment from 'moment'
+
+import uploader from 'vue-simple-uploader'
 
 Vue.prototype.moment = Moment
 
@@ -38,6 +41,7 @@ Vue.prototype.moment = Moment
 // Vue.use(ElementUI, { locale })
 // 如果想要中文版 element-ui，按如下方式声明
 Vue.use(ElementUI)
+Vue.use(uploader)
 
 Vue.config.productionTip = false
 

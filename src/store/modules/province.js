@@ -1,6 +1,6 @@
 import {login, logout, getInfo , login_BI,login_APP} from '@/api/user'
 import {getDate, setDate, removeDate} from '@/utils/auth'
-import {PROVINCE_INFO , PROVINCE_LIST} from './mutation-types'
+import {PROVINCE_INFO , PROVINCE_LIST} from '@/store/mutation-types'
 
 const state = {
     provinceInfo: {
